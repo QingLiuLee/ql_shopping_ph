@@ -1,17 +1,133 @@
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+//com
+$bgColor:#fff;
+$bgColor2:#F8F8F8;
+$bgcolor3:#F1F3F4;
+$borderColor:#ddd;
+
+$themColor: #FF6161;
+$themColor2: #F7A0A0;
+$themColor3: #D8BDF2;
+$themColor4: #BCE2EF;
+
+$fontColor:#111;
+$fontColor2:#fff;
+$fontColor3:#938B8A;
+
+$fontSize2:12px;
+$fontSize:14px;
+$fontSize8:18px;
+$fontSize20:20px;
+
+@mixin border-radius($radius:2px){
+  border-radius: $radius;
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  -o-border-radius: $radius;
 }
-#nav {
-  padding: 30px;
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-    &.router-link-exact-active {
-      color: #42b983;
+
+//mall
+.mall{
+  width: 100%;
+  height: 100%;
+
+  //footer
+  .mall-footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 46px;
+    background: $bgColor2;
+    display: flex;
+    border-top: 1px solid $borderColor;
+    div{
+      flex: 1;
+      padding: 5px 0;
+      a{
+        color: $fontColor3;
+        font-size: $fontSize2;
+        cursor: pointer;
+        text-decoration: none;
+        span{
+          i{
+            color: $fontColor3;
+            font-size: $fontSize8;
+          }
+        }
+        &.router-link-exact-active{
+          color: $themColor;
+          span{
+            i{
+              color: $themColor;
+            }
+          }
+        }
+      }
     }
+  }
+
+  .mall-head{
+    display: flex;
+    width: 100%;
+    height: 46px;
+    line-height: 46px;
+    background: $themColor;
+    color: $fontColor2;
+    span{
+      flex: 1;
+    }
+  }
+
+  //content
+  .mall-content{
+    width: 100%;
+    height: 100%;
+
+    //home
+    .mall-home{
+      width: 100%;
+      height: 100%;
+      background: $bgColor2;
+      .h-carousel{
+        width: calc(100% - 30px);
+        height: 300px;
+        margin: 15px auto;
+        .van-swipe{
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      .h-cricle{
+        display: flex;
+        width: 100%;
+        height: 50px;
+        div{
+          flex: 1;
+          text-align: center;
+          span{
+            display: block;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            margin: 0 auto;
+            @include border-radius(50%);
+            i{
+              color: $fontColor2;
+            }
+          }
+        }
+      }
+    }
+
+    //shop
+    .mall-shop{}
+
+    //about
+    .mall-about{}
+
+    //mine
+    .mall-mine{}
   }
 }

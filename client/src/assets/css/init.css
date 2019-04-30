@@ -3,22 +3,20 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-}
+  color: #2c3e50; }
 
-body{
-  background: #F8F8F8;
-}
+body {
+  background: #F8F8F8; }
 
-body,p{
+body, p {
   margin: 0;
-  padding: 0;
-}
+  padding: 0; }
 
 [class^=icon-] {
   font-family: "iconfont" !important;
   font-size: 16px;
   font-style: normal;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+  -moz-osx-font-smoothing: grayscale; }
+
+/*# sourceMappingURL=init.css.map */

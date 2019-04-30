@@ -1,15 +1,18 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-
+    <van-button type="default">默认按钮</van-button>
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator';
+// import { Button } from 'vant';
 
-@Component
-export default class HelloWorld extends Vue {
+@Component({
+  // [Button.name]: Button
+})
+export default class TabCon extends Vue {
   @Prop() private msg!: string;
 }
 </script>

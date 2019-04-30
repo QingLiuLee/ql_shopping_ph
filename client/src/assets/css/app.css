@@ -1,0 +1,74 @@
+.mall {
+  width: 100%;
+  height: 100%; }
+  .mall .mall-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 46px;
+    background: #F8F8F8;
+    display: flex;
+    border-top: 1px solid #ddd; }
+    .mall .mall-footer div {
+      flex: 1;
+      padding: 5px 0; }
+      .mall .mall-footer div a {
+        color: #938B8A;
+        font-size: 12px;
+        cursor: pointer;
+        text-decoration: none; }
+        .mall .mall-footer div a span i {
+          color: #938B8A;
+          font-size: 18px; }
+        .mall .mall-footer div a.router-link-exact-active {
+          color: #FF6161; }
+          .mall .mall-footer div a.router-link-exact-active span i {
+            color: #FF6161; }
+  .mall .mall-head {
+    display: flex;
+    width: 100%;
+    height: 46px;
+    line-height: 46px;
+    background: #FF6161;
+    color: #fff; }
+    .mall .mall-head span {
+      flex: 1; }
+  .mall .mall-content {
+    width: 100%;
+    height: 100%; }
+    .mall .mall-content .mall-home {
+      width: 100%;
+      height: 100%;
+      background: #F8F8F8; }
+      .mall .mall-content .mall-home .h-carousel {
+        width: calc(100% - 30px);
+        margin: 15px auto; }
+        .mall .mall-content .mall-home .h-carousel .el-carousel {
+          border-radius: 5px;
+          -webkit-border-radius: 5px;
+          -moz-border-radius: 5px;
+          -ms-border-radius: 5px;
+          -o-border-radius: 5px; }
+      .mall .mall-content .mall-home .h-cricle {
+        display: flex;
+        width: 100%;
+        height: 50px; }
+        .mall .mall-content .mall-home .h-cricle div {
+          flex: 1;
+          text-align: center; }
+          .mall .mall-content .mall-home .h-cricle div span {
+            display: block;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            margin: 0 auto;
+            border-radius: 50%;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            -ms-border-radius: 50%;
+            -o-border-radius: 50%; }
+            .mall .mall-content .mall-home .h-cricle div span i {
+              color: #fff; }
+
+/*# sourceMappingURL=app.css.map */

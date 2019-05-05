@@ -6,8 +6,8 @@ import store from './store';
 // import 'element-ui/lib/theme-chalk/index.css';
 // Vue.use(ElementUI);
 
-import { Button } from 'vant';
-Vue.use(Button);
+import { Button, Tag, Icon, Toast } from 'vant';
+Vue.use(Button).use(Tag).use(Icon).use(Toast);
 
 Vue.config.productionTip = false;
 

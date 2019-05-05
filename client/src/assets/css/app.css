@@ -1,3 +1,12 @@
+.mall-card {
+  background: #fff;
+  box-shadow: 1px 0px 3px rgba(0, 0, 0, 0.3);
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px; }
+
 .mall {
   width: 100%;
   height: 100%; }
@@ -26,30 +35,55 @@
           .mall .mall-footer div a.router-link-exact-active span i {
             color: #FF6161; }
   .mall .mall-head {
+    position: fixed;
+    top: 0;
+    left: 0;
     display: flex;
     width: 100%;
     height: 46px;
     line-height: 46px;
     background: #FF6161;
-    color: #fff; }
+    color: #fff;
+    z-index: 999; }
     .mall .mall-head span {
       flex: 1; }
+    .mall .mall-head .van-icon {
+      font-size: 20px;
+      line-height: 46px; }
+    .mall .mall-head .van-search {
+      background: #FF6161 !important;
+      border-radius: 10px;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      -ms-border-radius: 10px;
+      -o-border-radius: 10px; }
+      .mall .mall-head .van-search .van-icon {
+        line-height: inherit;
+        font-size: 18px; }
+      .mall .mall-head .van-search .van-cell {
+        padding: 2px 10px 2px 0; }
   .mall .mall-content {
     width: 100%;
-    height: 100%; }
+    height: calc(100% - 47px); }
     .mall .mall-content .mall-home {
       width: 100%;
       height: 100%;
-      background: #F8F8F8; }
+      background: #F8F8F8;
+      overflow: auto;
+      margin-top: 45px;
+      /*carousel*/
+      /*cricle opera block*/
+      /*9.9*/
+      /*activity*/
+      /*promotion*/
+      /*tab*/ }
       .mall .mall-content .mall-home .h-carousel {
-        width: calc(100% - 30px);
+        width: calc(100% - 20px);
+        height: 150px;
         margin: 15px auto; }
-        .mall .mall-content .mall-home .h-carousel .el-carousel {
-          border-radius: 5px;
-          -webkit-border-radius: 5px;
-          -moz-border-radius: 5px;
-          -ms-border-radius: 5px;
-          -o-border-radius: 5px; }
+        .mall .mall-content .mall-home .h-carousel .van-swipe {
+          width: 100%;
+          height: 100%; }
       .mall .mall-content .mall-home .h-cricle {
         display: flex;
         width: 100%;
@@ -70,5 +104,155 @@
             -o-border-radius: 50%; }
             .mall .mall-content .mall-home .h-cricle div span i {
               color: #fff; }
+      .mall .mall-content .mall-home .h-tj {
+        display: flex;
+        width: calc(100% - 20px);
+        height: 220px;
+        margin: 10px auto; }
+        .mall .mall-content .mall-home .h-tj .h-tj-item {
+          position: relative;
+          flex: 1;
+          border: 1px solid #FF9800;
+          border-radius: 3px;
+          -webkit-border-radius: 3px;
+          -moz-border-radius: 3px;
+          -ms-border-radius: 3px;
+          -o-border-radius: 3px;
+          margin: 20px 10px; }
+          .mall .mall-content .mall-home .h-tj .h-tj-item img {
+            width: 90%;
+            height: 90%;
+            opacity: .2;
+            padding-top: 10px; }
+          .mall .mall-content .mall-home .h-tj .h-tj-item .h-tj-item-title {
+            position: absolute;
+            top: 30px;
+            left: calc(50% - 66px);
+            width: 132px;
+            color: #7264CC; }
+            .mall .mall-content .mall-home .h-tj .h-tj-item .h-tj-item-title h4 {
+              font-size: 26px;
+              font-weight: bold;
+              margin-top: 0; }
+            .mall .mall-content .mall-home .h-tj .h-tj-item .h-tj-item-title p {
+              font-weight: bold; }
+          .mall .mall-content .mall-home .h-tj .h-tj-item .h-tj-item-title2 {
+            color: #FF6161; }
+          .mall .mall-content .mall-home .h-tj .h-tj-item .van-tag {
+            position: absolute;
+            left: calc(50% - 38px);
+            bottom: -15px;
+            width: 60px;
+            padding: 6px 8px;
+            border-radius: 25px;
+            -webkit-border-radius: 25px;
+            -moz-border-radius: 25px;
+            -ms-border-radius: 25px;
+            -o-border-radius: 25px; }
+      .mall .mall-content .mall-home .h-hd {
+        width: calc(100% - 30px);
+        height: 40px;
+        margin: 10px auto;
+        padding: 0 10px 0 0; }
+        .mall .mall-content .mall-home .h-hd .h-hd-title {
+          float: left;
+          line-height: 40px;
+          color: #FF9800;
+          width: 3em; }
+        .mall .mall-content .mall-home .h-hd .van-notice-bar {
+          background: #fff;
+          color: #111;
+          padding: 0; }
+      .mall .mall-content .mall-home .h-cx {
+        width: calc(100% - 20px);
+        height: 260px;
+        margin: 0 auto;
+        text-align: left; }
+        .mall .mall-content .mall-home .h-cx .h-cx-title {
+          width: 3em;
+          line-height: 40px;
+          clear: both;
+          text-align: left;
+          color: #FF9800; }
+        .mall .mall-content .mall-home .h-cx .h-cx-l {
+          width: calc(56% - 22px);
+          float: left;
+          margin: 10px 0 10px 10px;
+          border-right: 1px solid #ddd; }
+          .mall .mall-content .mall-home .h-cx .h-cx-l .van-tag {
+            padding: 3px; }
+        .mall .mall-content .mall-home .h-cx .h-cx-r {
+          width: 44%;
+          float: right;
+          padding: 10px 0 10px 10px; }
+          .mall .mall-content .mall-home .h-cx .h-cx-r .h-cx-r-item {
+            clear: both; }
+        .mall .mall-content .mall-home .h-cx .h-cx-l div, .mall .mall-content .mall-home .h-cx .h-cx-r .h-cx-r-item div {
+          clear: both; }
+          .mall .mall-content .mall-home .h-cx .h-cx-l div img, .mall .mall-content .mall-home .h-cx .h-cx-r .h-cx-r-item div img {
+            clear: both;
+            width: calc(50% - 10px);
+            height: auto;
+            margin-bottom: 10px;
+            margin-right: 10px;
+            border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            -ms-border-radius: 5px;
+            -o-border-radius: 5px; }
+      .mall .mall-content .mall-home .h-tab {
+        margin-top: 15px; }
+        .mall .mall-content .mall-home .h-tab .h-tab-all {
+          width: 100%;
+          margin: 0 auto;
+          min-height: 100px; }
+          .mall .mall-content .mall-home .h-tab .h-tab-all .van-tabs .van-tabs__line {
+            background: #FF6161;
+            border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            -ms-border-radius: 5px;
+            -o-border-radius: 5px; }
+          .mall .mall-content .mall-home .h-tab .h-tab-all .h-tab-item-all {
+            width: calc(100% - 20px);
+            column-gap: 10px;
+            column-count: 2;
+            margin: 15px auto; }
+            .mall .mall-content .mall-home .h-tab .h-tab-all .h-tab-item-all .h-tab-item {
+              padding: 10px;
+              margin-bottom: 10px;
+              break-inside: avoid;
+              text-align: left; }
+              .mall .mall-content .mall-home .h-tab .h-tab-all .h-tab-item-all .h-tab-item img {
+                width: 100%;
+                height: auto; }
+              .mall .mall-content .mall-home .h-tab .h-tab-all .h-tab-item-all .h-tab-item .h-tab-item-name {
+                margin: 10px 0;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+                font-size: 14px; }
+              .mall .mall-content .mall-home .h-tab .h-tab-all .h-tab-item-all .h-tab-item .h-tab-item-price {
+                color: #FF6161;
+                font-weight: bold;
+                margin-right: 10px;
+                font-size: 14px; }
+              .mall .mall-content .mall-home .h-tab .h-tab-all .h-tab-item-all .h-tab-item .h-tab-item-payment {
+                color: #938B8A;
+                font-size: 12px; }
+              .mall .mall-content .mall-home .h-tab .h-tab-all .h-tab-item-all .h-tab-item .h-tab-item-more {
+                float: right;
+                color: #938B8A;
+                padding-top: 3px; }
+    .mall .mall-content .mall-detail .mall-head {
+      background: rgba(0, 0, 0, 0.3); }
+    .mall .mall-content .mall-detail .d-carousel {
+      width: 100%;
+      height: 220px; }
+      .mall .mall-content .mall-detail .d-carousel .van-swipe {
+        width: 100%;
+        height: 100%; }
 
 /*# sourceMappingURL=app.css.map */

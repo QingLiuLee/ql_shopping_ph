@@ -28,8 +28,8 @@ Vue.use(Tab).use(Tabs);
 })
 export default class TabCon extends Vue {
     /*prop*/
-    @Prop() msg:string;
-    @Prop() tabList: any;
+    @Prop() msg!: string;
+    @Prop() tabList!: any;
 
     /*data*/
     active:number = 0;
@@ -83,7 +83,7 @@ export default class TabCon extends Vue {
         this.sendMsgs(message);
     }
 
-    checkTab(index, title) {
+    checkTab(index:number, title:string) {
         this.$toast(title);
     }
 }

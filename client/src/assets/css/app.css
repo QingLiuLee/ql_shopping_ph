@@ -44,24 +44,32 @@
     line-height: 46px;
     background: #FF6161;
     color: #fff;
-    z-index: 999; }
-    .mall .mall-head span {
-      flex: 1; }
+    z-index: 999 !important;
+    /*span{
+      width: 50px;
+      display: inline-block;
+    }*/ }
     .mall .mall-head .van-icon {
       font-size: 20px;
-      line-height: 46px; }
-    .mall .mall-head .van-search {
-      background: #FF6161 !important;
-      border-radius: 10px;
-      -webkit-border-radius: 10px;
-      -moz-border-radius: 10px;
-      -ms-border-radius: 10px;
-      -o-border-radius: 10px; }
-      .mall .mall-head .van-search .van-icon {
-        line-height: inherit;
-        font-size: 18px; }
-      .mall .mall-head .van-search .van-cell {
-        padding: 2px 10px 2px 0; }
+      line-height: 46px;
+      color: #fff; }
+    .mall .mall-head .van-nav-bar__title {
+      color: #fff; }
+    .mall .mall-head::after {
+      display: none; }
+  .mall .mall-home-head span {
+    flex: 1; }
+  .mall .mall-home-head .van-search {
+    background: #FF6161 !important;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px; }
+    .mall .mall-home-head .van-search .van-icon {
+      line-height: inherit; }
+    .mall .mall-home-head .van-search .van-cell {
+      padding: 2px 10px 2px 0; }
   .mall .mall-content {
     width: 100%;
     height: calc(100% - 47px); }
@@ -254,5 +262,182 @@
       .mall .mall-content .mall-detail .d-carousel .van-swipe {
         width: 100%;
         height: 100%; }
+    .mall .mall-content .mall-shop {
+      width: 100%;
+      height: 100%; }
+    .mall .mall-content .mall-about {
+      width: 100%;
+      height: 100%; }
+    .mall .mall-content .mall-mine {
+      width: 100%;
+      height: 100%;
+      /*detail*/
+      /*order*/
+      /*opera*/
+      /*list*/ }
+      .mall .mall-content .mall-mine .mi-detail {
+        width: 100%;
+        height: 120px;
+        background: #FF6161;
+        color: #fff;
+        margin-top: 46px;
+        padding-top: 30px;
+        position: relative;
+        z-index: 99; }
+        .mall .mall-content .mall-mine .mi-detail .mi-detail-l {
+          position: relative;
+          float: left;
+          width: 70px;
+          height: 70px;
+          border-radius: 50%;
+          -webkit-border-radius: 50%;
+          -moz-border-radius: 50%;
+          -ms-border-radius: 50%;
+          -o-border-radius: 50%;
+          padding-left: 20px; }
+          .mall .mall-content .mall-mine .mi-detail .mi-detail-l img {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            -ms-border-radius: 50%;
+            -o-border-radius: 50%; }
+          .mall .mall-content .mall-mine .mi-detail .mi-detail-l .van-tag {
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            width: 38px;
+            margin-left: -17px;
+            border-radius: 10px;
+            -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+            -ms-border-radius: 10px;
+            -o-border-radius: 10px; }
+        .mall .mall-content .mall-mine .mi-detail .mi-detail-c {
+          float: left;
+          width: calc(100% - 150px);
+          text-align: left;
+          padding-left: 20px; }
+          .mall .mall-content .mall-mine .mi-detail .mi-detail-c h3 {
+            margin: 10px 0 5px; }
+          .mall .mall-content .mall-mine .mi-detail .mi-detail-c p {
+            font-size: 14px; }
+        .mall .mall-content .mall-mine .mi-detail .mi-detail-qd {
+          position: absolute;
+          right: 0;
+          bottom: 50px;
+          border-radius: 10px 0 0 10px;
+          -webkit-border-radius: 10px 0 0 10px;
+          -moz-border-radius: 10px 0 0 10px;
+          -ms-border-radius: 10px 0 0 10px;
+          -o-border-radius: 10px 0 0 10px;
+          padding: 5px 10px; }
+      .mall .mall-content .mall-mine .mi-order {
+        position: relative;
+        width: calc(100% - 20px);
+        height: 170px;
+        margin: -25px auto 0;
+        z-index: 100;
+        font-size: 14px; }
+        .mall .mall-content .mall-mine .mi-order .mi-order-t {
+          display: flex;
+          padding-top: 10px; }
+          .mall .mall-content .mall-mine .mi-order .mi-order-t > div {
+            flex: 1;
+            text-align: center; }
+            .mall .mall-content .mall-mine .mi-order .mi-order-t > div p {
+              margin-bottom: 7px; }
+              .mall .mall-content .mall-mine .mi-order .mi-order-t > div p i {
+                font-size: 23px;
+                color: #FF6161;
+                margin-right: 0; }
+        .mall .mall-content .mall-mine .mi-order .mi-order-msg {
+          width: calc(100% - 16px);
+          height: 80px;
+          background: #F1F3F4;
+          margin: 10px auto 0;
+          border-radius: 5px;
+          -webkit-border-radius: 5px;
+          -moz-border-radius: 5px;
+          -ms-border-radius: 5px;
+          -o-border-radius: 5px;
+          text-align: left; }
+          .mall .mall-content .mall-mine .mi-order .mi-order-msg > p {
+            padding: 10px; }
+            .mall .mall-content .mall-mine .mi-order .mi-order-msg > p span {
+              font-size: 12px; }
+          .mall .mall-content .mall-mine .mi-order .mi-order-msg img {
+            float: left;
+            width: 35px;
+            height: 35px;
+            text-align: left;
+            border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            -ms-border-radius: 5px;
+            -o-border-radius: 5px;
+            margin: 0 10px; }
+          .mall .mall-content .mall-mine .mi-order .mi-order-msg .mi-order-msg-img {
+            float: left;
+            font-size: 12px; }
+            .mall .mall-content .mall-mine .mi-order .mi-order-msg .mi-order-msg-img p {
+              margin-bottom: 4px; }
+      .mall .mall-content .mall-mine .mi-opera {
+        width: calc(100% - 20px);
+        margin: 10px auto;
+        height: 100px;
+        /*collect*/
+        /*integral*/ }
+        .mall .mall-content .mall-mine .mi-opera .mall-card {
+          width: calc(50% - 6px);
+          height: 100%;
+          float: left;
+          color: #fff; }
+        .mall .mall-content .mall-mine .mi-opera .mi-opera-collect {
+          margin-right: 6px;
+          background: #D8BDF2; }
+          .mall .mall-content .mall-mine .mi-opera .mi-opera-collect > div {
+            width: 50%;
+            float: left; }
+            .mall .mall-content .mall-mine .mi-opera .mi-opera-collect > div p {
+              padding-top: 20px;
+              line-height: 25px;
+              font-size: 13px; }
+              .mall .mall-content .mall-mine .mi-opera .mi-opera-collect > div p .van-icon {
+                font-size: 30px; }
+              .mall .mall-content .mall-mine .mi-opera .mi-opera-collect > div p:last-child {
+                padding-top: 5px; }
+        .mall .mall-content .mall-mine .mi-opera .mi-opera-integral {
+          margin-left: 6px;
+          background: #F7A0A0; }
+          .mall .mall-content .mall-mine .mi-opera .mi-opera-integral p {
+            padding-top: 15px;
+            line-height: 25px; }
+      .mall .mall-content .mall-mine .mi-list {
+        width: calc(100% - 20px);
+        text-align: left;
+        margin: 0 auto 10px;
+        font-size: 14px; }
+        .mall .mall-content .mall-mine .mi-list .mi-list-item {
+          width: calc(100% - 10px);
+          height: 40px;
+          line-height: 40px;
+          clear: both;
+          border-bottom: 1px solid #ddd;
+          margin: 0 5px; }
+          .mall .mall-content .mall-mine .mi-list .mi-list-item .mi-list-item-l {
+            float: left; }
+            .mall .mall-content .mall-mine .mi-list .mi-list-item .mi-list-item-l i {
+              color: #8BC34A; }
+          .mall .mall-content .mall-mine .mi-list .mi-list-item .mi-list-item-r {
+            float: right;
+            width: auto;
+            max-width: 50%;
+            color: #938B8A; }
+            .mall .mall-content .mall-mine .mi-list .mi-list-item .mi-list-item-r .mi-list-item-r-shief {
+              color: #938B8A; }
+            .mall .mall-content .mall-mine .mi-list .mi-list-item .mi-list-item-r .van-icon {
+              font-size: 16px; }
 
 /*# sourceMappingURL=app.css.map */

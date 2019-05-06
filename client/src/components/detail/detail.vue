@@ -1,11 +1,9 @@
 <template>
   <div class="mall-detail">
     <!--head-->
-    <div class="mall-head">
-      <span><van-icon name="qr" /></span>
-      <span>商品详情</span>
-      <span><van-icon name="chat-o" /></span>
-    </div>
+    <van-nav-bar title="商品详情" left-arrow class="mall-head">
+      <van-icon name="chat-o" slot="right" />
+    </van-nav-bar>
 
     <!--轮播图-->
     <div class="d-carousel">
@@ -37,9 +35,9 @@ export default class Detail extends Vue {
 
     /*data*/
     images: any[] = [
-        require('../assets/images/banner_01.jpg'),
-        require('../assets/images/banner_02.png'),
-        require('../assets/images/banner_03.jpg')
+        require('../../assets/images/banner_01.jpg'),
+        require('../../assets/images/banner_02.png'),
+        require('../../assets/images/banner_03.jpg')
     ];
 }
 </script>

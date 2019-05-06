@@ -25,7 +25,7 @@
     export default class App extends Vue {
         private menuList: any = [
             {
-                icon: 'icon-f-home2',
+                icon: 'icon-f-home',
                 name: '首页',
                 path: '/',
             },
@@ -37,7 +37,7 @@
             {
                 icon: 'icon-f-gwc',
                 name: '购物车',
-                path: '/shoppingCart',
+                path: '/cart',
             },
             {
                 icon: 'icon-f-my',

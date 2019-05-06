@@ -1,12 +1,11 @@
 <template>
     <div class="mall-home">
         <!--head-->
-        <div class="mall-head">
-            <!--<span></span><span>首页</span><span></span>-->
-            <span><van-icon name="qr" /></span>
+        <div class="mall-head mall-home-head">
+            <span><van-icon name="scan" /></span>
             <van-search
                     placeholder="请输入搜索关键词"
-                    v-model="value"
+                    v-model="searchVal"
                     shape="round"
             />
             <span><van-icon name="chat-o" /></span>
@@ -120,6 +119,7 @@
     })
     export default class Home extends Vue {
         /*data*/
+        searchVal: string = '';
         images: any[] = [
             require('../assets/images/banner_01.jpg'),
             require('../assets/images/banner_02.png'),

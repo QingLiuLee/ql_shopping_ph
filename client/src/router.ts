@@ -1,7 +1,6 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import Home from './views/Home.vue';
-import Detail from "./views/detail.vue";
+import Detail from "./components/detail/detail.vue";
 
 Vue.use(Router);
 
@@ -10,9 +9,9 @@ export default new Router({
   base: process.env.BASE_URL,
   routes: [
     {
-      path: '/',
+      path: '/home',
       name: 'home',
-      component: Home,
+      component: () => import('./views/Home.vue'),
     },
     {
       path: '/shop',
@@ -20,9 +19,9 @@ export default new Router({
       component: () => import('./views/Shop.vue'),
     },
     {
-        path: '/emm',
-        name: 'emm',
-        component: () => import('./views/About.vue'),
+        path: '/cart',
+        name: 'cart',
+        component: () => import('./views/Cart.vue'),
     },
     {
         path: '/mine',

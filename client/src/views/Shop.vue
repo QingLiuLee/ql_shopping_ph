@@ -1,6 +1,8 @@
 <template>
   <div class="mall-shop">
-    <h3>店铺</h3>
+    <van-nav-bar title="商品分类" left-arrow class="mall-head">
+      <van-icon name="apps-o" slot="right" />
+    </van-nav-bar>
   </div>
 </template>
 

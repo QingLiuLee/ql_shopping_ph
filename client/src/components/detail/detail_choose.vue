@@ -32,7 +32,7 @@
         /*prop*/
 
         /*data*/
-        showBase: boolean = true;
+        showBase: boolean = false;
         quota: number = 5;
         quotaUsed: number = 2;
         resetStepperOnHide: boolean = true;

@@ -28,7 +28,7 @@
               v-for="(itemC, indexC) in item.list"
               :key="indexC"
             >
-              <div><img :src="itemC.img" alt=""></div>
+              <div><img :src="hd_images[index]" alt=""></div>
               <p>{{itemC.name}}</p>
             </li>
           </ul>
@@ -67,7 +67,7 @@ export default class Classification extends Vue {
             name: '生鲜',
             item: [
                 {
-                    name: '生鲜',
+                    name: '生鲜1',
                     list: [
                         {
                             name: '生鲜',
@@ -80,7 +80,7 @@ export default class Classification extends Vue {
                     ]
                 },
                 {
-                    name: '生鲜',
+                    name: '生鲜2',
                     list: [
                         {
                             name: '生鲜',
@@ -93,7 +93,7 @@ export default class Classification extends Vue {
                     ]
                 },
                 {
-                    name: '生鲜',
+                    name: '生鲜3',
                     list: [
                         {
                             name: '生鲜',
@@ -111,7 +111,7 @@ export default class Classification extends Vue {
             name: '零食',
             item: [
                 {
-                    name: '零食',
+                    name: '零食1',
                     list: [
                         {
                             name: '布丁',
@@ -140,7 +140,7 @@ export default class Classification extends Vue {
                     ]
                 },
                 {
-                    name: '零食',
+                    name: '零食2',
                     list: [
                         {
                             name: '布丁',
@@ -169,7 +169,7 @@ export default class Classification extends Vue {
                     ]
                 },
                 {
-                    name: '零食',
+                    name: '零食3',
                     list: [
                         {
                             name: '布丁',
@@ -203,7 +203,7 @@ export default class Classification extends Vue {
             name: '水果',
             item: [
                 {
-                    name: '水果',
+                    name: '水果1',
                     list: [
                         {
                             name: '香蕉',
@@ -213,6 +213,15 @@ export default class Classification extends Vue {
                             name: '苹果',
                             img: require('../assets/images/sp_01.jpg'),
                         },
+                        {
+                            name: '葡萄',
+                            img: require('../assets/images/sp_01.jpg'),
+                        }
+                    ]
+                },
+                {
+                    name: '水果2',
+                    list: [
                         {
                             name: '葡萄',
                             img: require('../assets/images/sp_01.jpg'),

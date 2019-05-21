@@ -437,6 +437,8 @@ $W:calc(100% - 20px);
           }
         }
         .mall-classify-con-l{
+          height: 100%;
+          overflow-x: hidden;
           background: $bgColor;
           border-right: 1px solid $borderColor;
           ul{
@@ -465,13 +467,17 @@ $W:calc(100% - 20px);
           }
         }
         .mall-classify-con-r{
+          height: 100%;
+          overflow-x: hidden;
           .mall-classify-con-item{
             padding: 0 10px;
+            margin-bottom: 10px;
             h3{
               line-height: 30px;
               text-align: left;
               margin: 0;
               padding-top: 10px;
+              font-weight: normal;
             }
             ul{
               display: -webkit-flex;
@@ -481,6 +487,7 @@ $W:calc(100% - 20px);
               background: $bgColor;
               @include border-radius(4px);
               padding: 10px 0 0 10px;
+              border: 1px solid $borderColor;
               li{
                 width: calc(25% - 10px);
                 margin-bottom: 10px;

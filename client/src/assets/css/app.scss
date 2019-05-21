@@ -6,6 +6,7 @@ $borderColor:#ddd;
 
 $themColor: #FF6161;
 $themColor2: #F7A0A0;
+$themColorG: #f7a0a080;
 $themColor3: #D8BDF2;
 $themColor4: #BCE2EF;
 
@@ -66,6 +67,7 @@ $W:calc(100% - 20px);
 .mall{
   width: 100%;
   height: 100%;
+  font-size: 14px;
 
   /*swipe*/
   .van-swipe-item{
@@ -412,9 +414,101 @@ $W:calc(100% - 20px);
     }
 
     //shop
-    .mall-shop{
+    .mall-classify{
       width: 100%;
-      height: 100%;
+      height: calc(100% - 45px);
+      padding: 45px 0;
+      .mall-classify-con{
+        display: flex;
+        display: -webkit-flex;
+        align-items: stretch;
+        width: 100%;
+        height: 100%;
+        &>div{
+          -webkit-flex-grow: 0;
+          -webkit-flex-shrink: 0;
+          -webkit-flex-basis: 60px;
+          flex-grow: 0;
+          flex-shrink: 0;
+          flex-basis: 60px;
+          &:nth-of-type(2) {
+            -webkit-flex-basis: calc(100% - 60px);
+            flex-basis: calc(100% - 60px);
+          }
+        }
+        .mall-classify-con-l{
+          background: $bgColor;
+          border-right: 1px solid $borderColor;
+          ul{
+            li{
+              position: relative;
+              line-height: 35px;
+              text-align: left;
+              margin: 10px 0;
+              padding: 0 10px;
+              font-size: $fontSize;
+              transition: all 2s ease;
+              &.active {
+                background: $themColorG;
+                color: $themColor;
+                .item-bar {
+                  position: absolute;
+                  top: 0;
+                  right: -1px;
+                  width: 3px;
+                  height: 35px;
+                  background: $themColor;
+                  z-index: 1;
+                }
+              }
+            }
+          }
+        }
+        .mall-classify-con-r{
+          .mall-classify-con-item{
+            padding: 0 10px;
+            h3{
+              line-height: 30px;
+              text-align: left;
+              margin: 0;
+              padding-top: 10px;
+            }
+            ul{
+              display: -webkit-flex;
+              -webkit-flex-wrap: wrap;
+              display: flex;
+              flex-wrap: wrap;
+              background: $bgColor;
+              @include border-radius(4px);
+              padding: 10px 0 0 10px;
+              li{
+                width: calc(25% - 10px);
+                margin-bottom: 10px;
+                padding-right: 10px;
+                div{
+                  display: inline-block;
+                  position: relative;
+                  width: 100%;
+                  height: 0;
+                  padding-top:100%;
+                  @include border-radius(4px);
+                  img {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width:  100%;
+                    height: 100%;
+                    @include border-radius(4px);
+                  }
+                }
+                p{
+                  text-align: center;
+                }
+              }
+            }
+          }
+        }
+      }
     }
 
     //about

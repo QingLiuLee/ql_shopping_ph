@@ -32,7 +32,7 @@
             {
                 icon: 'icon-f-fl',
                 name: '分类',
-                path: '/shop',
+                path: '/classification',
             },
             {
                 icon: 'icon-f-gwc',

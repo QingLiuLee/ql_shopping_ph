@@ -1,6 +1,5 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import Detail from './components/detail/detail.vue';
 
 Vue.use(Router);
 
@@ -20,9 +19,9 @@ export default new Router({
             component: () => import('./views/Home.vue'),
         },
         {
-            path: '/shop',
-            name: 'shop',
-            component: () => import('./views/Shop.vue'),
+            path: '/classification',
+            name: 'classification',
+            component: () => import('./views/classification.vue'),
         },
         {
             path: '/cart',
@@ -37,7 +36,7 @@ export default new Router({
         {
             path: '/detail',
             name: 'detail',
-            component: Detail,
+            component: () => import('./components/detail/detail.vue'),
         },
     ],
 });

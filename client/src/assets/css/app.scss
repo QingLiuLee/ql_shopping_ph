@@ -67,6 +67,14 @@ $W:calc(100% - 20px);
   width: 100%;
   height: 100%;
 
+  /*swipe*/
+  .van-swipe-item{
+    img{
+      width: 100%;
+      height: 100%;
+    }
+  }
+
   //footer
   .mall-footer{
     position: fixed;
@@ -80,7 +88,7 @@ $W:calc(100% - 20px);
     div{
       flex: 1;
       padding: 5px 0;
-      a{
+      &>a{
         color: $fontColor3;
         font-size: $fontSize2;
         cursor: pointer;
@@ -89,6 +97,7 @@ $W:calc(100% - 20px);
           i{
             color: $fontColor3;
             font-size: $fontSize8;
+            margin-right: 0;
           }
         }
         &.router-link-exact-active{
@@ -158,9 +167,12 @@ $W:calc(100% - 20px);
 
       /*carousel*/
       .h-carousel{
-        width: $W;
-        height: 150px;
-        margin: 15px auto;
+        //width: $W;
+        height: 180px;
+        //margin: 15px auto;
+
+        width: 100%;
+        margin-bottom: 10px;
         .van-swipe{
           width: 100%;
           height: 100%;
@@ -172,16 +184,18 @@ $W:calc(100% - 20px);
         display: flex;
         width: 100%;
         height: 50px;
+        margin-bottom: 10px;
         div{
           flex: 1;
           text-align: center;
           span{
             display: block;
-            width: 40px;
-            height: 40px;
-            line-height: 40px;
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
             margin: 0 auto;
             @include border-radius(50%);
+            box-shadow: 1px 0px 10px rgba(0, 0, 0, 0.3);
             i{
               color: $fontColor2;
             }
@@ -193,14 +207,14 @@ $W:calc(100% - 20px);
       .h-tj{
         display: flex;
         width: $W;
-        height: 220px;
+        height: 180px;
         margin: 10px auto;
         .h-tj-item{
           position: relative;
           flex: 1;
           border:1px solid $themColor_02;
           @include border-radius(3px);
-          margin: 20px 10px;
+          margin: 10px 10px 20px;
           img{
             width: 90%;
             height: 90%;
@@ -258,9 +272,10 @@ $W:calc(100% - 20px);
       /*promotion*/
       .h-cx{
         width: $W;
-        height: 260px;
+        height: auto;
         margin: 0 auto;
         text-align: left;
+        overflow: hidden;
         .h-cx-title{
           width: 3em;
           line-height: 40px;
@@ -269,16 +284,17 @@ $W:calc(100% - 20px);
           color: $themColor_02;
         }
         .h-cx-l{
-          width: calc(56% - 22px);
+          width: calc(54% - 22px);
           float: left;
           margin: 10px 0 10px 10px;
           border-right: 1px solid $borderColor;
           .van-tag{
-            padding: 3px;
+            padding: 1px 3px;
+            font-size: 12px;
           }
         }
         .h-cx-r{
-          width: 44%;
+          width: 46%;
           float: right;
           padding: 10px 0 10px 10px;
           .h-cx-r-item{
@@ -287,14 +303,32 @@ $W:calc(100% - 20px);
         }
         .h-cx-l, .h-cx-r .h-cx-r-item{
           div {
+            width: 100%;
             clear: both;
-            img {
-              clear: both;
-              width:  calc(50% - 10px);;
-              height: auto;
+            p{
+              display: inline-block;
+              position: relative;
+              width:  calc(50% - 10px);
+              height: 0;
+              padding-top: calc(50% - 10px);
               margin-bottom: 10px;
               margin-right: 10px;
               @include border-radius(5px);
+            }
+            img {
+              position: absolute;
+              top: 0;
+              left: 0;
+              width:  100%;
+              height: 100%;
+              @include border-radius(5px);
+            }
+          }
+        }
+        .h-cx-r .h-cx-r-item {
+          div{
+            p{
+              margin-bottom: 0;
             }
           }
         }
@@ -302,24 +336,31 @@ $W:calc(100% - 20px);
 
       /*tab*/
       .h-tab{
-        margin-top: 15px;
+        width: $W;
+        margin: 15px auto 0;
         .h-tab-all{
           width: 100%;
           margin: 0 auto;
           min-height: 100px;
           //background: $bgColor;
           .van-tabs{
+            box-shadow: 1px 0px 3px rgba(0, 0, 0, 0.1);
+            @include border-radius(3px);
             .van-tabs__line{
               background: $themColor;
               @include border-radius(5px);
             }
+            .van-tabs__wrap{
+              border-bottom: 2px solid $borderColor;
+            }
           }
 
           .h-tab-item-all{
-            width: $W;
+            //width: $W;
+            width: 100%;
             column-gap:10px;
             column-count: 2;
-            margin: 15px auto;
+            margin: 7px auto;
             .h-tab-item{
               padding: 10px;
               margin-bottom: 10px;

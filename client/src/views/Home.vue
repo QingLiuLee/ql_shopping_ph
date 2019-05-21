@@ -14,7 +14,7 @@
         <!--轮播图-->
         <div class="h-carousel">
             <van-swipe :autoplay="3000" indicator-color="white">
-                <van-swipe-item v-for="item in images">
+                <van-swipe-item v-for="(item, index) in images" :key="index">
                     <img :src="item" alt="">
                 </van-swipe-item>
             </van-swipe>
@@ -34,15 +34,15 @@
                 <img :src="tj_url" alt="">
                 <div class="h-tj-item-title">
                     <h4>天天特价</h4>
-                    <p>全网最低 + 超实惠</p>
+                    <p>天天特价,日日新</p>
                 </div>
                 <van-tag round color="#FF6161" text-color="#fff">立即购买</van-tag>
             </div>
             <div class="h-tj-item">
                 <img :src="tj_url2" alt="">
                 <div class="h-tj-item-title h-tj-item-title2">
-                    <h4>天天特价</h4>
-                    <p>全网最低 + 超实惠</p>
+                    <h4>9块9包邮</h4>
+                    <p>全网最低,超实惠</p>
                 </div>
                 <van-tag round color="#FF6161" text-color="#fff">立即购买</van-tag>
             </div>
@@ -69,10 +69,10 @@
                     <van-tag color="#FF6161" text-color="#fff">21</van-tag>
                 </span>
                 <div>
-                    <img :src="hd_images[0]" alt="">
-                    <img :src="hd_images[1]" alt="">
-                    <img :src="hd_images[2]" alt="">
-                    <img :src="hd_images[4]" alt="">
+                    <p><img :src="hd_images[0]" alt=""></p>
+                    <p><img :src="hd_images[2]" alt=""></p>
+                    <p><img :src="hd_images[1]" alt=""></p>
+                    <p><img :src="hd_images[3]" alt=""></p>
                 </div>
             </div>
 
@@ -80,15 +80,15 @@
                 <div class="h-cx-r-item">
                     <span class="h-cx-title">居家必备</span>
                     <div>
-                        <img :src="hd_images[4]" alt="">
-                        <img :src="hd_images[5]" alt="">
+                        <p><img :src="hd_images[0]" alt=""></p>
+                        <p><img :src="hd_images[5]" alt=""></p>
                     </div>
                 </div>
                 <div class="h-cx-r-item">
                     <span class="h-cx-title">节日好礼</span>
                     <div>
-                        <img :src="hd_images[3]" alt="">
-                        <img :src="hd_images[5]" alt="">
+                        <p><img :src="hd_images[2]" alt=""></p>
+                        <p><img :src="hd_images[4]" alt=""></p>
                     </div>
                 </div>
             </div>
@@ -156,11 +156,7 @@
 
 
 <style lang="scss">
-    .van-swipe-item:nth-child(odd) {
-        background-color: #66c6f2;
-    }
+    .van-swipe-item{
 
-    .van-swipe-item:nth-child(even) {
-        background-color: #39a9ed;
     }
 </style>

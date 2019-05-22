@@ -51,8 +51,8 @@ import { Component, Vue } from 'vue-property-decorator';
  * @Description: 分类
 */
 export default class Classification extends Vue {
-    classifyList: Array<String> = ['生鲜','零食','水果','美妆','女装','男装','洗护','百货'];
-    current: Number = 0;
+    classifyList: Array<string> = ['生鲜','零食','水果','美妆','女装','男装','洗护','百货'];
+    current: number = 0;
     hd_images: any[] = [
         require('../assets/images/sp_01.jpg'),
         require('../assets/images/sp_02.jpg'),
@@ -237,7 +237,7 @@ export default class Classification extends Vue {
     ]
 
     // 切换类别
-    checkClassity(index: Number){
+    checkClassity(index: number){
         this.current = index;
     }
 }

@@ -1,7 +1,7 @@
 <template>
   <div class="mall-mine">
     <!--head-->
-    <van-nav-bar title="我的" left-arrow class="mall-head">
+    <van-nav-bar title="我的" left-arrow class="mall-head" style="z-index: 100 !important;">
       <van-icon name="setting-o" slot="right" />
     </van-nav-bar>
 
@@ -38,7 +38,7 @@
       </div>
 
       <!--积分-->
-      <div class="mall-card mi-opera-integral">
+      <div class="mall-card mi-opera-integral" @click="goIntegral">
         <p>已有积分：190</p>
         <p>兑换积分</p>
       </div>
@@ -51,7 +51,7 @@
           <i :class="item.icon"/>
           <span>{{item.name}}</span>
         </div>
-        <div class="mi-list-item-r">
+        <div class="mi-list-item-r" @click="item.click">
           <span class="mi-list-item-r-shief">
             {{item.shief}}
           </span>
@@ -66,11 +66,19 @@
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
 import Order from '@/components/mine/order.vue';
+import AddressEditData from "@/components/mine/address/address_edit.vue";
 import { CouponCell, CouponList } from 'vant';
 Vue.use(CouponCell).use(CouponList);
+
+/**
+ * @author hui
+ * @date 2019/5/21
+ * @Description: 我的
+*/
 @Component({
   components: {
-      Order
+      Order,
+      AddressEditData
   },
 })
 export default class Mine extends Vue {
@@ -81,26 +89,40 @@ export default class Mine extends Vue {
             icon:'icon-mi-dz',
             name:'收货地址',
             shief:'新增',
-            isArrow:true
+            isArrow:true,
+            click: this.goAddress
         },
         {
             icon:'icon-mi-zl4',
             name:'完善资料',
             shief:'',
-            isArrow:true
+            isArrow:true,
+            click: this.goAddress
         },
         {
             icon:'icon-mi-kj2',
             name:'我的卡卷',
             shief:'',
-            isArrow:true
+            isArrow:true,
+            click: this.goAddress
         },
         {
             icon:'icon-mi-tc',
             name:'退出登录',
             shief:'',
-            isArrow:false
+            isArrow:false,
+            click: this.goAddress
         }
-    ]
+    ];
+
+    goIntegral(){
+        // 跳转积分
+        this.$router.push('/integral')
+    }
+
+    goAddress(){
+        // 跳转收货地址
+        this.$router.push('/address')
+    }
 }
 </script>

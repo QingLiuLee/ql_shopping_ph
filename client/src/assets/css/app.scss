@@ -124,7 +124,7 @@ $W:calc(100% - 20px);
     line-height: 46px;
     background: $themColor;
     color: $fontColor2;
-    z-index: 999 !important;
+    //z-index: 999;
     /*span{
       width: 50px;
       display: inline-block;
@@ -158,12 +158,20 @@ $W:calc(100% - 20px);
     }
   }
 
+  .mall-all{
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    height: 100%;
+    background: $bgColor2;
+  }
+
   //content
   .mall-content{
     width: 100%;
     height: calc(100% - 47px);
 
-    //home
+    /* home */
     .mall-home{
       @include mall-all;
 
@@ -398,7 +406,7 @@ $W:calc(100% - 20px);
       }
     }
 
-    //detail
+    // home - detail
     .mall-detail{
       .mall-head{
         background: rgba(0,0,0,.3);
@@ -413,7 +421,7 @@ $W:calc(100% - 20px);
       }
     }
 
-    //shop
+    /* shop */
     .mall-classify{
       width: 100%;
       height: calc(100% - 45px);
@@ -518,13 +526,13 @@ $W:calc(100% - 20px);
       }
     }
 
-    //about
+    /* about */
     .mall-about{
       width: 100%;
       height: 100%;
     }
 
-    //mine
+    /* mine */
     .mall-mine{
       width: 100%;
       height: 100%;
@@ -708,6 +716,33 @@ $W:calc(100% - 20px);
             }
             .van-icon{
               font-size: $fontSize6;
+            }
+          }
+        }
+      }
+    }
+
+    // mine - integral
+    .mall-integral{
+      .mall-integral-con{}
+    }
+
+    // mine - address
+    .mall-address{
+      padding-top: 45px;
+      .mall-address-con{
+        .van-address-edit{
+          .van-cell__title van-field__label{
+            text-align: left;
+          }
+          .van-address-edit__buttons{
+            padding-bottom: 0;
+            .van-button--danger{
+              background: $themColor;
+            }
+            .van-button--default{
+              border-color: $themColor;
+              color: $themColor;
             }
           }
         }

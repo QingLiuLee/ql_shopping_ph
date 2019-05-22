@@ -50,7 +50,6 @@
     line-height: 46px;
     background: #FF6161;
     color: #fff;
-    z-index: 999 !important;
     /*span{
       width: 50px;
       display: inline-block;
@@ -76,9 +75,19 @@
       line-height: inherit; }
     .mall .mall-home-head .van-search .van-cell {
       padding: 2px 10px 2px 0; }
+  .mall .mall-all {
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    height: 100%;
+    background: #F8F8F8; }
   .mall .mall-content {
     width: 100%;
-    height: calc(100% - 47px); }
+    height: calc(100% - 47px);
+    /* home */
+    /* shop */
+    /* about */
+    /* mine */ }
     .mall .mall-content .mall-home {
       width: 100%;
       height: 100%;
@@ -569,5 +578,16 @@
               color: #938B8A; }
             .mall .mall-content .mall-mine .mi-list .mi-list-item .mi-list-item-r .van-icon {
               font-size: 16px; }
+    .mall .mall-content .mall-address {
+      padding-top: 45px; }
+      .mall .mall-content .mall-address .mall-address-con .van-address-edit .van-cell__title van-field__label {
+        text-align: left; }
+      .mall .mall-content .mall-address .mall-address-con .van-address-edit .van-address-edit__buttons {
+        padding-bottom: 0; }
+        .mall .mall-content .mall-address .mall-address-con .van-address-edit .van-address-edit__buttons .van-button--danger {
+          background: #FF6161; }
+        .mall .mall-content .mall-address .mall-address-con .van-address-edit .van-address-edit__buttons .van-button--default {
+          border-color: #FF6161;
+          color: #FF6161; }
 
 /*# sourceMappingURL=app.css.map */

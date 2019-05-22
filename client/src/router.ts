@@ -19,6 +19,11 @@ export default new Router({
             component: () => import('./views/Home.vue'),
         },
         {
+            path: '/detail',
+            name: 'detail',
+            component: () => import('./components/detail/detail.vue'),
+        },
+        {
             path: '/classification',
             name: 'classification',
             component: () => import('./views/classification.vue'),
@@ -34,9 +39,14 @@ export default new Router({
             component: () => import('./views/Mine.vue'),
         },
         {
-            path: '/detail',
-            name: 'detail',
-            component: () => import('./components/detail/detail.vue'),
+            path: '/integral',
+            name: 'integral',
+            component: () => import('./components/mine/integral/integral.vue'),
         },
+        {
+            path: '/address',
+            name: 'address',
+            component: () => import('./components/mine/address/address.vue'),
+        }
     ],
 });

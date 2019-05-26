@@ -1,5 +1,6 @@
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  //font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: '幼圆';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -25,4 +26,13 @@ body,p{
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  margin-right: 4px;
+}
+
+
+/*vant*/
+.van-icon{
+  margin-right: 4px;
+  font-size: 18px;
+  vertical-align: sub;
 }

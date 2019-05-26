@@ -5,7 +5,7 @@
       <van-tab :title="item.name" v-for="item in tabList">
         <div class="h-tab-item-all">
           <div class="mall-card h-tab-item" v-for="item in data">
-            <img :src="item.img" alt="">
+            <img :src="item.img" alt="" @click="goDetail()">
             <p class="h-tab-item-name">{{item.name}}</p>
             <p>
               <span class="h-tab-item-price">￥{{item.price}}</span>
@@ -85,6 +85,11 @@ export default class TabCon extends Vue {
 
     checkTab(index, title) {
         this.$toast(title);
+    }
+
+    //跳转详情
+    goDetail(){
+      this.$router.push({name:'detail'});
     }
 }
 </script>

@@ -74,6 +74,7 @@ $fontSize20:20px;
     background: $bgColor2;
     display: flex;
     border-top: 1px solid $borderColor;
+    z-index: 999;
     div{
       flex: 1;
       padding: 5px 0;
@@ -131,6 +132,21 @@ $fontSize20:20px;
     }
   }
 
+  .mall-head2 {
+    display: block;
+    text-align: left;
+    span {
+      width:50px;
+      text-align: center;
+      display: inline-block;
+      height: 46px;
+    }
+    .mall-head-title{
+      width: calc(100% - 100px);
+      vertical-align: 5px;
+    }
+  }
+
   //content
   .mall-content{
     width: 100%;
@@ -146,6 +162,10 @@ $fontSize20:20px;
         height: 150px;
         margin: 15px auto;
         .van-swipe{
+          width: 100%;
+          height: 100%;
+        }
+        img{
           width: 100%;
           height: 100%;
         }
@@ -341,6 +361,13 @@ $fontSize20:20px;
 
     //detail
     .mall-detail{
+      width: 100%;
+      height: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background: $bgColor2;
+      z-index: 1000;
       .mall-head{
         background: rgba(0,0,0,.3);
       }
@@ -350,6 +377,43 @@ $fontSize20:20px;
         .van-swipe{
           width: 100%;
           height: 100%;
+        }
+        img{
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .d-choose{
+        text-align: left;
+      }
+
+      .d-con-item{
+        margin-top: 15px;
+        width: calc(100% - 20px);
+        background: $bgColor;
+        text-align: left;
+        padding: 10px;
+      }
+
+      .d-con-msg{
+        .d-con-msg-name{
+          font-size: $fontSize;
+          margin: 7px 0;
+        }
+        .d-con-msg-zan{
+          font-size: $fontSize;
+          float: left;
+          color: $fontColor3;
+          .van-icon{
+            font-size: $fontSize8;
+            vertical-align: sub;
+            margin-right: 3px;
+          }
+        }
+        .d-con-msg-look{
+          font-size: $fontSize;
+          float: right;
+          color: $fontColor3;
         }
       }
     }

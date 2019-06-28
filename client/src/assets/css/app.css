@@ -781,9 +781,29 @@
           width: calc(50% - 35px);
           float: left;
           padding: 10px;
-          margin: 0 10px 10px; }
+          margin: 0 10px 10px;
+          text-align: center; }
           .mall .mall-content .mall-integral .mall-integral-con .integral-item:nth-child(2n) {
             margin: 0 10px 10px 0; }
+          .mall .mall-content .mall-integral .mall-integral-con .integral-item > div {
+            background: #F7A0A0;
+            color: #fff;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 4px;
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            -ms-border-radius: 4px;
+            -o-border-radius: 4px; }
+          .mall .mall-content .mall-integral .mall-integral-con .integral-item .van-tag {
+            padding: 3px 20px;
+            border-radius: 10px;
+            -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+            -ms-border-radius: 10px;
+            -o-border-radius: 10px; }
+          .mall .mall-content .mall-integral .mall-integral-con .integral-item p {
+            margin-bottom: 5px; }
     .mall .mall-content .mall-address {
       padding-top: 45px; }
       .mall .mall-content .mall-address .mall-address-con .van-address-edit .van-cell__title van-field__label {

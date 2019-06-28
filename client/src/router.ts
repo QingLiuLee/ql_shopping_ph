@@ -1,10 +1,5 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-<<<<<<< HEAD
-import Home from './views/Home.vue';
-import Detail from "./components/detail/detail.vue";
-=======
->>>>>>> 1a7a25798b66d03f542860d77e5686fefcae0c45
 
 Vue.use(Router);
 

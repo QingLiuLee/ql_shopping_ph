@@ -1,21 +1,33 @@
 <template>
-    <div class="d-choose">
-        <van-button type="default" @click="showStu">选择规格</van-button>
-        <van-sku
-                v-model="showBase"
-                :sku="sku"
-                :goods="goods"
-                :goods-id="skuData.goodsId"
-                :hide-stock="sku.hide_stock"
-                :quota="quota"
-                :quota-used="quotaUsed"
-                :reset-stepper-on-hide="resetStepperOnHide"
-                :reset-selected-sku-on-hide="resetSelectedSkuOnHide"
-                :close-on-click-overlay="closeOnClickOverlay"
-                :disable-stepper-input="disableStepperInput"
-                @buy-clicked="onBuyClicked"
-                @add-cart="onAddCartClicked"
-        />
+    <div class="d-discount-cp">
+        <span>
+          <span class="block">产品</span>
+        </span>
+        <div>
+            <p>颜色分类</p>
+            <p>
+                <img :src="item" alt=""  v-for="(item, index) in images" :key="index">
+            </p>
+        </div>
+        <span class="fr" @click="showStu"><i class="icon-right"></i></span>
+
+        <div v-show="showBase">
+            <van-sku
+                    v-model="showBase"
+                    :sku="sku"
+                    :goods="goods"
+                    :goods-id="skuData.goodsId"
+                    :hide-stock="sku.hide_stock"
+                    :quota="quota"
+                    :quota-used="quotaUsed"
+                    :reset-stepper-on-hide="resetStepperOnHide"
+                    :reset-selected-sku-on-hide="resetSelectedSkuOnHide"
+                    :close-on-click-overlay="closeOnClickOverlay"
+                    :disable-stepper-input="disableStepperInput"
+                    @buy-clicked="onBuyClicked"
+                    @add-cart="onAddCartClicked"
+            />
+        </div>
     </div>
 </template>
 
@@ -30,6 +42,7 @@
     @Component({})
     export default class Detail extends Vue {
         /*prop*/
+        @Prop() images!:object;
 
         /*data*/
         showBase: boolean = false;

@@ -6,6 +6,10 @@ client/yarn-error.log*
 client/test/unit/coverage/
 client/test/e2e/reports/
 client/selenium-debug.log
+client/src/assets/css/app.css
+client/src/assets/css/app.css.map
+client/src/assets/css/init.css
+client/src/assets/css/init.css.map
 
 # Editor directories and files
 .idea

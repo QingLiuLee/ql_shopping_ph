@@ -9,7 +9,17 @@
     />
 
     <div class="mall-integral-con">
+      <div class="mall-card integral-item">
+          1111111
+      </div>
 
+      <div class="mall-card integral-item">
+        1111111
+      </div>
+
+      <div class="mall-card integral-item">
+        1111111
+      </div>
     </div>
   </div>
 </template>
@@ -25,9 +35,16 @@ import { Component, Prop, Vue, Emit } from 'vue-property-decorator';
 @Component({})
 export default class Integral extends Vue {
 
+    private data:object = [
+        {
+
+        }
+    ]
+
     goBack(){
         // 返回我的
-        this.$router.push('/mine');
+        // this.$router.push('/mine');
+        this.$router.go(-1)
     }
 }
 </script>

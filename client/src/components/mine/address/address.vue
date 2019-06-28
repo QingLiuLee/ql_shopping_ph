@@ -92,7 +92,7 @@ export default class Address extends Vue {
         this.isEdit = true;
         this.editData = {};
     }
-    onEdit(item:object, index:number) {
+    onEdit(item:any, index:number) {
         this.$toast('Edit:' + index);
         this.isEdit = true;
         this.editData = {

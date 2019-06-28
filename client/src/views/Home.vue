@@ -63,9 +63,9 @@
                 <span class="h-cx-title">今日促销</span>
                 <span style="margin-left: 10px">
                     <van-tag color="#FF6161" text-color="#fff">08</van-tag>
-                    <span style="margin: 0 2px;font-weight: bold">:</span>
+                    <span style="margin: 0 2px;font-weight: bold;color: #FF6161">:</span>
                     <van-tag color="#FF6161" text-color="#fff">11</van-tag>
-                    <span style="margin: 0 2px;font-weight: bold">:</span>
+                    <span style="margin: 0 2px;font-weight: bold;color: #FF6161">:</span>
                     <van-tag color="#FF6161" text-color="#fff">21</van-tag>
                 </span>
                 <div>

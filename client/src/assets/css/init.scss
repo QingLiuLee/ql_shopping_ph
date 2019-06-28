@@ -3,7 +3,6 @@
   font-family: '幼圆';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
 }
 body,html{
@@ -35,4 +34,16 @@ body,p{
   margin-right: 4px;
   font-size: 18px;
   vertical-align: sub;
+}
+
+.fl{
+  float: left;
+}
+
+.fr{
+  float: right;
+}
+
+.clear{
+  clear: both;
 }

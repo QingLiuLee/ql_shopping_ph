@@ -27,7 +27,7 @@
             {
                 icon: 'icon-f-home',
                 name: '首页',
-                path: '/',
+                path: '/home',
             },
             {
                 icon: 'icon-f-fl',

@@ -70,6 +70,7 @@ $W:calc(100% - 20px);
   width: 100%;
   height: 100%;
   font-size: 14px;
+  overflow: hidden;
 
   /*swipe*/
   .van-swipe-item{
@@ -147,6 +148,7 @@ $W:calc(100% - 20px);
   }
 
   .mall-home-head{
+    z-index: 100;
     span{
       flex: 1;
     }
@@ -175,19 +177,23 @@ $W:calc(100% - 20px);
   .mall-content{
     width: 100%;
     height: calc(100% - 47px);
+    overflow: hidden;
 
     /* home */
     .mall-home{
+      height: calc(100% - 45px);
       @include mall-all;
-
+      overflow-x: hidden;
+      margin-top: 0;
       /*carousel*/
       .h-carousel{
         //width: $W;
-        height: 180px;
-        //margin: 15px auto;
-
         width: 100%;
+        height: 180px;
+        margin-top: 45px;
+        //margin: 15px auto;
         margin-bottom: 15px;
+        z-index: 98;
         .van-swipe{
           width: 100%;
           height: 100%;
@@ -200,6 +206,7 @@ $W:calc(100% - 20px);
         width: 100%;
         height: 50px;
         margin-bottom: 15px;
+        z-index: 98;
         div{
           flex: 1;
           text-align: center;
@@ -210,7 +217,7 @@ $W:calc(100% - 20px);
             line-height: 50px;
             margin: 0 auto;
             @include border-radius(50%);
-            box-shadow: 1px 0px 10px rgba(0, 0, 0, 0.3);
+            box-shadow: 1px 0 10px rgba(0, 0, 0, 0.3);
             i{
               color: $fontColor2;
               margin-right: 0;
@@ -227,6 +234,7 @@ $W:calc(100% - 20px);
         height: 180px;
         margin: 10px auto;
         text-align: center;
+        z-index: 98;
         .h-tj-item{
           position: relative;
           flex: 1;
@@ -274,6 +282,7 @@ $W:calc(100% - 20px);
         height: 40px;
         margin: 10px auto;
         padding-left: 10px;
+        z-index: 98;
         .h-hd-title{
           float: left;
           line-height: 40px;
@@ -298,6 +307,7 @@ $W:calc(100% - 20px);
         margin: 0 auto;
         text-align: left;
         overflow: hidden;
+        z-index: 98;
         .h-cx-title{
           width: 3em;
           line-height: 30px;
@@ -366,14 +376,14 @@ $W:calc(100% - 20px);
           min-height: 100px;
           //background: $bgColor;
           .van-tabs{
-            box-shadow: 1px 0px 3px rgba(0, 0, 0, 0.1);
+            //box-shadow: 1px 0px 3px rgba(0, 0, 0, 0.1);
             @include border-radius(3px);
             .van-tabs__line{
               background: $themColor;
               @include border-radius(5px);
             }
             .van-tabs__wrap{
-              box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+              //box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
             }
           }
 
@@ -774,6 +784,7 @@ $W:calc(100% - 20px);
     .mall-mine{
       width: 100%;
       height: 100%;
+      overflow-x: hidden;
       /*detail*/
       .mi-detail{
         width: 100%;

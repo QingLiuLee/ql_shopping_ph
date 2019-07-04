@@ -11,6 +11,7 @@
   width: 100%;
   height: 100%;
   font-size: 14px;
+  overflow: hidden;
   /*swipe*/ }
   .mall .van-swipe-item img {
     width: 100%;
@@ -64,19 +65,21 @@
       color: #fff; }
     .mall .mall-head::after {
       display: none; }
-  .mall .mall-home-head span {
-    flex: 1; }
-  .mall .mall-home-head .van-search {
-    background: #FF6161 !important;
-    border-radius: 10px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px; }
-    .mall .mall-home-head .van-search .van-icon {
-      line-height: inherit; }
-    .mall .mall-home-head .van-search .van-cell {
-      padding: 2px 10px 2px 0; }
+  .mall .mall-home-head {
+    z-index: 100; }
+    .mall .mall-home-head span {
+      flex: 1; }
+    .mall .mall-home-head .van-search {
+      background: #FF6161 !important;
+      border-radius: 10px;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      -ms-border-radius: 10px;
+      -o-border-radius: 10px; }
+      .mall .mall-home-head .van-search .van-icon {
+        line-height: inherit; }
+      .mall .mall-home-head .van-search .van-cell {
+        padding: 2px 10px 2px 0; }
   .mall .mall-all {
     position: fixed;
     z-index: 1000;
@@ -87,16 +90,20 @@
   .mall .mall-content {
     width: 100%;
     height: calc(100% - 47px);
+    overflow: hidden;
     /* home */
     /* shop */
     /* about */
     /* mine */ }
     .mall .mall-content .mall-home {
+      height: calc(100% - 45px);
       width: 100%;
       height: 100%;
       background: #F8F8F8;
       overflow: auto;
       margin-top: 45px;
+      overflow-x: hidden;
+      margin-top: 0;
       /*carousel*/
       /*cricle opera block*/
       /*9.9*/
@@ -104,9 +111,11 @@
       /*promotion*/
       /*tab*/ }
       .mall .mall-content .mall-home .h-carousel {
-        height: 180px;
         width: 100%;
-        margin-bottom: 15px; }
+        height: 180px;
+        margin-top: 45px;
+        margin-bottom: 15px;
+        z-index: 98; }
         .mall .mall-content .mall-home .h-carousel .van-swipe {
           width: 100%;
           height: 100%; }
@@ -114,7 +123,8 @@
         display: flex;
         width: 100%;
         height: 50px;
-        margin-bottom: 15px; }
+        margin-bottom: 15px;
+        z-index: 98; }
         .mall .mall-content .mall-home .h-cricle div {
           flex: 1;
           text-align: center; }
@@ -129,7 +139,7 @@
             -moz-border-radius: 50%;
             -ms-border-radius: 50%;
             -o-border-radius: 50%;
-            box-shadow: 1px 0px 10px rgba(0, 0, 0, 0.3); }
+            box-shadow: 1px 0 10px rgba(0, 0, 0, 0.3); }
             .mall .mall-content .mall-home .h-cricle div span i {
               color: #fff;
               margin-right: 0;
@@ -139,7 +149,8 @@
         width: calc(100% - 20px);
         height: 180px;
         margin: 10px auto;
-        text-align: center; }
+        text-align: center;
+        z-index: 98; }
         .mall .mall-content .mall-home .h-tj .h-tj-item {
           position: relative;
           flex: 1;
@@ -184,7 +195,8 @@
         width: calc(100% - 30px);
         height: 40px;
         margin: 10px auto;
-        padding-left: 10px; }
+        padding-left: 10px;
+        z-index: 98; }
         .mall .mall-content .mall-home .h-hd .h-hd-title {
           float: left;
           line-height: 40px;
@@ -202,7 +214,8 @@
         height: auto;
         margin: 0 auto;
         text-align: left;
-        overflow: hidden; }
+        overflow: hidden;
+        z-index: 98; }
         .mall .mall-content .mall-home .h-cx .h-cx-title {
           width: 3em;
           line-height: 30px;
@@ -260,7 +273,6 @@
           margin: 0 auto;
           min-height: 100px; }
           .mall .mall-content .mall-home .h-tab .h-tab-all .van-tabs {
-            box-shadow: 1px 0px 3px rgba(0, 0, 0, 0.1);
             border-radius: 3px;
             -webkit-border-radius: 3px;
             -moz-border-radius: 3px;
@@ -273,8 +285,6 @@
               -moz-border-radius: 5px;
               -ms-border-radius: 5px;
               -o-border-radius: 5px; }
-            .mall .mall-content .mall-home .h-tab .h-tab-all .van-tabs .van-tabs__wrap {
-              box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); }
           .mall .mall-content .mall-home .h-tab .h-tab-all .h-tab-item-all {
             width: 100%;
             column-gap: 10px;
@@ -600,6 +610,7 @@
     .mall .mall-content .mall-mine {
       width: 100%;
       height: 100%;
+      overflow-x: hidden;
       /*detail*/
       /*order*/
       /*opera*/
